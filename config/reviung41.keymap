@@ -30,15 +30,15 @@ keymap {
                         // |  -------   -----   -----   -----   -----   -----                 -----   -----   -----   -----   -----   -------  |
                         // | |  SFT  | |  Z  | |  X  | |  C  | |  V  | |  B  |               |  N  | |  M  | |  ,  | |  .  | |  /  | | SFT ) | |
                         // |  -------   -----   -----   -----   -----   -----                 -----   -----   -----   -----   -----   -------  |
-                        // |                            ------   ------------     -------     ------------   ------                            |
-                        // |                           | _NUM | |   _NAV ENT |   | GRAVE |   | SPACE      | | _SYM |                           |
-                        // |                            ------   ------------     -------     ------------   ------                            |
+                        // |                          ----------   ----------     -------     ------------   ------                            |
+                        // |                         | _NUM ESC | | _NAV ENT |   | GRAVE |   | SPACE      | | _SYM |                           |
+                        // |                          ----------   ----------     -------     ------------   ------                            |
                         // ---------------------------------------------------------------------------------------------------------------------
 
                         &kp TAB          &kp Q   &kp W   &kp E      &kp R    &kp T               &kp Y       &kp U      &kp I       &kp O     &kp P      &kp BACKSPACE
                         &mt LCTRL DEL    &kp A   &kp S   &kp D      &kp F    &kp G               &kp H       &kp J      &kp K       &kp L     &kp SEMI   &kp APOSTROPHE
                         &mt LSHFT LPAR   &kp Z   &kp X   &kp C      &kp V    &kp B               &kp N       &kp M      &kp COMMA   &kp DOT   &kp FSLH   &mt LSHFT RPAR  
-                                                         &mo _NUM   &lt _NAV ENTER   &kp GRAVE   &kp SPACE   &mo _SYM
+                                                 &lt _NUM ESC       &lt _NAV ENTER   &kp GRAVE   &mt LGUI SPACE   &mo _SYM
                         >;
                 };
 
