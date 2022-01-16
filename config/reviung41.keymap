@@ -9,43 +9,37 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define NAVIG   3
-#define FUNCT   4
-#define ADJST   5
+#define _DEF 0
+#define _NUM 1
+#define _SYM 2
+#define _NAV 3
+#define __FN 4
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
         keymap {
                 compatible = "zmk,keymap";
-
-                default_layer {
-// --------------------------------------------------------------------------------------
-// |  TAB |  Q   |  W   |  E   |  R   |  T  |   |  Y  |  U   |  I   |  O   |  P  | BKSP |
-// | CTRL |  A   |  S   |  D   |  F   |  G  |   |  H  |  J   |  K   |  L   |  ;  |   '  |
-// | SHFT |CTL(Z)|ALT(X)|SFT(C)|CTL(V)|  B  |   |  N  |CTL(M)|SFT(,)|ALT(.)|  /  |RETURN|
-//                         | LGUI | LWR |  SPACE  | RSE | FUNC |
-                       bindings = <
-   &kp TAB   &kp Q       &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I           &kp O        &kp P    &kp BSPC
-   &kp ESC   &kp A       &kp S      &kp D       &kp F       &kp G   &kp H &kp J        &kp K           &kp L        &kp SEMI &kp SQT
-   &kp LSHFT &hm LCTRL Z &hm LALT X &hm LSHFT C &hm LCTRL V &kp B   &kp N &hm RCTRL M  &hm RSHFT COMMA &hm RALT DOT &kp FSLH &kp RET
-                        &kp LGUI  &mo LOWER &lt NAVIG SPACE &mo RAISE  &mo FUNCT
-                        >;
-                };
-
+                default_layer {                      					  
+                bindings = <
+                        // ----------------------------------------------------------------------------------------------------------------------
+                        // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
+                        // | |  TAB  | |  Q  | |  W  | |  E  | |  R  | |  T  |                |  Y  | |  U  | |  I  | |  O  | |  P  | |  BCK  | |
+                        // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
+                        // |  -------   -----   -----   -----   -----   -----       ----       -----   -----   -----   -----   -----   -------  |
+                        // | |CTRLDEL| |  A  | |  S  | |  D  | |  F  | |  G  |     | `  |     |  H  | |  J  | |  K  | |  L  | |  :  | |   '   | |
+                        // |  -------   -----   -----   -----   -----   -----       ----       -----   -----   -----   -----   -----   -------  |
+                        // |  -------   -----   -----   -----   -----   -----       ----       -----   -----   -----   -----   -----   -------  |
+                        // | |  SFT  | |  Z  | |  X  | |  C  | |  V  | |  B  |     | F5 |     |  N  | |  M  | |  ,  | |  .  | |  /  | | SFT ) | |
+                        // |  -------   -----   -----   -----   -----   -----       ----       -----   -----   -----   -----   -----   -------  |
+                        // |  -------   ---------   ---------   -------------       ----       -------------   ---------   ---------   -------  |
+                        // | |  ALT  | | GUI     | |    _NUM | |    _NAV ENT |     | F8 |     | SPC         | | _SYM    | |         | |  GUI  | |
+                        // |  -------   ---------   ---------   -------------       ----       -------------   ---------   ---------   -------  |
+                        // ----------------------------------------------------------------------------------------------------------------------
+                        &kp TAB          &kp Q   &kp W   &kp E      &kp R    &kp T               &kp Y       &kp U      &kp I       &kp O     &kp P      &kp BACKSPACE
+                        &mt LCTRL DEL    &kp A   &kp S   &kp D      &kp F    &kp G               &kp H       &kp J      &kp K       &kp L     &kp SEMI   &kp APOSTROPHE
+                        &mt LSHFT LPAR   &kp Z   &kp X   &kp C      &kp V    &kp B               &kp N       &kp M      &kp COMMA   &kp DOT   &kp FSLH   &mt LSHFT RPAR  
+                                                         &mo _NUM   &lt _NAV ENTER   &kp GRAVE   &kp SPACE   &mo _SYM
+                >;
+        };
                 lower_layer {
 // -----------------------------------------------------------------------------
 // | DEL |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL |
