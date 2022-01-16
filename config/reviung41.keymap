@@ -14,6 +14,10 @@
 #define _SYM 2
 #define _NAV 3
 
+&mt {
+        tapping-term-ms = <230>;
+};
+
 / {
 keymap {
         compatible = "zmk,keymap";
@@ -82,10 +86,10 @@ keymap {
                         // |                                    -----   -----       ----       -----   -----                                    |
                         // ----------------------------------------------------------------------------------------------------------------------
                         
-                        &kp TILDE       &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT               &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
-                        &kp BACKSPACE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE       &none    &none       &none      &none      &none      &none      &none
-                        &kp SPACE       &none       &none       &kp LPAR   &kp RPAR   &none          &none    &none       &none      &none      &none      &none      &none      
-                                                                              &none      &none       &none    &trans   &none 
+                        &kp TILDE       &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
+                        &kp BACKSPACE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE            &none       &none      &none      &none      &none      &none
+                        &kp SPACE       &none       &none       &kp LPAR   &kp RPAR   &none               &none       &none      &none      &none      &none      &none      
+                                                                              &none   &none       &none   &trans      &none 
                         >;         
                 };
 
@@ -107,8 +111,8 @@ keymap {
                         // ----------------------------------------------------------------------------------------------------------------------
                         
                         &none   &none   &none   &none   &none   &none             &none      &kp PG_UP   &kp UP     &none       &none     &trans
-                        &none   &none   &none   &none   &none   &none    &none    &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
-                        &none   &none   &none   &none   &none   &none    &none    &none      &kp PG_DN   &none      &none       &none     &none
+                        &none   &none   &none   &none   &none   &none             &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
+                        &none   &none   &none   &none   &none   &none             &none      &kp PG_DN   &none      &none       &none     &none
                                                         &none   &none    &none    &trans     &none
                         >;         
                 };
