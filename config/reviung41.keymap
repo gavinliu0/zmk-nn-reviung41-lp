@@ -106,20 +106,20 @@ keymap {
                         // | | BOOT  | | F1  | | F2  | | F3  | | F4  | | BT0 |                |     | |PG_UP| | UP  | |     | |     | |  BCK  | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
-                        // | |       | | F5  | | F6  | | F7  | | F8  | | BT1 |                |HOME | |LEFT | |DOWN | |RIGHT| | END | |       | |
+                        // | | BT_CLR| | F5  | | F6  | | F7  | | F8  | | BT1 |                |HOME | |LEFT | |DOWN | |RIGHT| | END | |       | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // | |       | | F9  | | F10 | | F1l | | F12 | | BT2 |                |     | |PG_DN| |     | |     | |     | |       | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |                                    -----   -----       ----       -----   -----                                    |
-                        // |                                   |BT_CR| |     |     |    |     | SPC | |     |                                   |
+                        // |                                   |     | |     |  |BT_CLR_ALL|  | SPC | |     |                                   |
                         // |                                    -----   -----       ----       -----   -----                                    |
                         // ----------------------------------------------------------------------------------------------------------------------
                         
                         &bootloader  &kp F1   &kp F2    &kp F3    &kp F4         &bt BT_SEL 0              &none      &kp PG_UP   &kp UP     &none       &none     &trans
-                        &none        &kp F5   &kp F6    &kp F7    &kp F8         &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
+                        &bt BT_CLR   &kp F5   &kp F6    &kp F7    &kp F8         &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
                         &none        &kp F9   &kp F10   &kp F11   &kp F12        &bt BT_SEL 2              &none      &kp PG_DN   &none      &none       &none     &none
-                                                                  &bt BT_CLR     &none          &trans     &none      &none
+                                                                  &none          &bt BT_CLR_ALL            &trans     &none      &none
                         >;
                 };
 };
