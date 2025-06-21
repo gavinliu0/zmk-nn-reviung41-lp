@@ -117,7 +117,7 @@ keymap {
                         // ----------------------------------------------------------------------------------------------------------------------
                         
                         &bootloader  &kp F1   &kp F2    &kp F3    &kp F4         &bt BT_SEL 0              &none      &kp PG_UP   &kp UP     &none       &none     &trans
-                        &bt BT_CLR   &kp F5   &kp F6    &kp F7    &kp F8         &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
+                        &bt BT_CLR   &kp F5   &kp F6    &kp F7    &kp F8         &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &studio_unlock
                         &none        &kp F9   &kp F10   &kp F11   &kp F12        &bt BT_SEL 2              &none      &kp PG_DN   &none      &none       &none     &none
                                                                   &none          &bt BT_CLR_ALL            &trans     &none      &none
                         >;
